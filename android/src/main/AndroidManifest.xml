@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.reactlibrary">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.reactlibrary">
+    <uses-sdk tools:overrideLibrary="com.emeint.android.fawryplugin"/>
 </manifest>

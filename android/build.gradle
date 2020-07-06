@@ -68,11 +68,23 @@ repositories {
     }
     google()
     jcenter()
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'com.android.support:design:26.0.0'
+    implementation 'com.android.support:cardview-v7:26.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'com.google.android.gms:play-services-base:11.0.0'
+    implementation 'com.android.support:appcompat-v7:26.0.0'
+    implementation (name: 'fawrySDK', ext: 'aar')
 }
 
 def configureReactNativePom(def pom) {
