@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "16.11.0",
     "react-native": "0.62.2",
-    "react-native-fawry-sdk": "link:../"
+    "react-native-fawry-sdk": "link:.."
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
