@@ -50,6 +50,10 @@ export default class App extends Component<{}> {
     FawrySdk.startPaymentActivity();
   };
 
+  componentWillUnmount() {
+    FawrySdk.resetFawrySDK();
+  }
+
   render() {
     return (
       <View style={styles.container}>

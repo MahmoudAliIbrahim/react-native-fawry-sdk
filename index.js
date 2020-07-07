@@ -1,8 +1,6 @@
 import { NativeModules } from "react-native";
 
 const { FawrySdk } = NativeModules;
-
-console.log(FawrySdk);
 export default class FawrySDK {
   static LANGUAGES = {
     AR: FawrySdk.LANGUAGES.AR,
@@ -39,5 +37,9 @@ export default class FawrySDK {
 
   static startPaymentActivity() {
     return FawrySdk.startPaymentActivity();
+  }
+
+  static resetFawrySDK() {
+    FawrySdk.resetFawrySDK();
   }
 }

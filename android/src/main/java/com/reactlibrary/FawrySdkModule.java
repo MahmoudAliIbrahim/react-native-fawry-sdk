@@ -123,6 +123,11 @@ public class FawrySdkModule extends ReactContextBaseJavaModule implements FawryS
         FawrySdk.startPaymentActivity(this.reactContext);
     }
 
+    @ReactMethod
+    public void resetFawrySDK(){
+        FawrySdk.resetFawrySDK();
+    }
+
 
     private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
