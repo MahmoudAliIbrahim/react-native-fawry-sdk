@@ -8,30 +8,67 @@
  * https://github.com/facebook/react-native
  */
 
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import React, {Component} from 'react';
+import {StyleSheet, Text, View, Button} from 'react-native';
 import FawrySdk from 'react-native-fawry-sdk';
+import secrets from './secrets';
 
 export default class App extends Component<{}> {
-  state = {
-    status: 'starting',
-    message: '--'
-  };
   componentDidMount() {
-    FawrySdk.sampleMethod('Testing', 123, (message) => {
-      this.setState({
-        status: 'native callback received',
-        message
-      });
-    });
+    FawrySdk.initSDK(FawrySdk.STYLES.STYLE1);
   }
+
+  initPaymentPlugin = () => {
+    const data = {
+      merchantID: secrets.merchantID,
+      serverURL: secrets.serverURL,
+      items: [
+        {
+          price: '100',
+          description: 'Hello',
+          quantity: '1',
+          sku: '1234',
+        },
+      ],
+      language: FawrySdk.LANGUAGES.EN,
+    };
+    FawrySdk.initPaymentPlugin(data);
+  };
+
+  initCardTokenizer = () => {
+    const data = {
+      merchantID: secrets.merchantID,
+      serverURL: secrets.serverURL,
+      customerEmail: 'mahmoud.ali@1trolley.com',
+      customerMobile: '01115299051',
+      language: FawrySdk.LANGUAGES.EN,
+    };
+    FawrySdk.initCardTokenizer(data);
+  };
+
+  startPaymentActivity = () => {
+    FawrySdk.startPaymentActivity();
+  };
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>☆FawrySdk example☆</Text>
-        <Text style={styles.instructions}>STATUS: {this.state.status}</Text>
-        <Text style={styles.welcome}>☆NATIVE CALLBACK MESSAGE☆</Text>
-        <Text style={styles.instructions}>{this.state.message}</Text>
+
+        <Button
+          title={'Init Payment Plugin'}
+          onPress={this.initPaymentPlugin}
+        />
+
+        <Button
+          title={'Init Card Tokenizer'}
+          onPress={this.initCardTokenizer}
+        />
+
+        <Button
+          title={'start payment activity'}
+          onPress={this.startPaymentActivity}
+        />
       </View>
     );
   }
@@ -40,7 +77,7 @@ export default class App extends Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
@@ -48,10 +85,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
