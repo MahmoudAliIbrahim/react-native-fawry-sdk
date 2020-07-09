@@ -1,9 +1,9 @@
 @objc(FawrySdk)
 class FawrySdk: NSObject {
 
-    @objc(multiply:withB:withResolver:withRejecter:)
-    func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-        resolve(a*b)
+    @objc(initFawry:withResolver:withRejecter:)
+    func initFawry(style: String,resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+        resolve("Success")
     }
     
 
@@ -19,5 +19,9 @@ class FawrySdk: NSObject {
                 "STYLE_2": "STYLE_2"
             ],
         ]
+    }
+    @objc
+    func requiresMainQueueSetup() -> Bool {
+        return true
     }
 }

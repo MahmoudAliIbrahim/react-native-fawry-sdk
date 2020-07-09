@@ -1,4 +1,4 @@
-import { NativeModules } from "react-native";
+import { NativeModules, Platform } from "react-native";
 
 const { FawrySdk } = NativeModules;
 export default class FawrySDK {
@@ -13,6 +13,9 @@ export default class FawrySDK {
   };
 
   static initSDK(style) {
+    if (Platform.OS === "ios") {
+      return FawrySdk.initFawry(style);
+    }
     return FawrySdk.init(style);
   }
 
