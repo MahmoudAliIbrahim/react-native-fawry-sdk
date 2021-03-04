@@ -2,9 +2,9 @@
   "name": "react-native-fawry-sdk",
   "title": "React Native Fawry Sdk",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "Fawry SDK Wrapper for react-native",
   "main": "index.js",
-  "homepage": "https://github.com/github_account/react-native-fawry-sdk",
+  "homepage": "https://github.com/MahmoudAliIbrahim/react-native-fawry-sdk",
   "files": [
     "README.md",
     "android",
@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-fawry-sdk.git",
-    "baseUrl": "https://github.com/github_account/react-native-fawry-sdk"
+    "url": "git+https://github.com/MahmoudAliIbrahim/react-native-fawry-sdk.git",
+    "baseUrl": "https://github.com/MahmoudAliIbrahim/react-native-fawry-sdk"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Mahmoud Ali Ibrahim",
+    "email": "ma7moud.saraya@gmail.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
