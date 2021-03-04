@@ -1,5 +1,7 @@
 # react-native-fawry-sdk
 
+**iOS still under development.**
+
 ## Getting started
 
 `$ npm install react-native-fawry-sdk --save`
@@ -29,9 +31,4 @@ allprojects {
 
 ## Usage
 
-```javascript
-import FawrySdk from "react-native-fawry-sdk";
-
-// TODO: What to do with the module?
-FawrySdk;
-```
+Check [example](https://github.com/MahmoudAliIbrahim/react-native-fawry-sdk/tree/main/example)
