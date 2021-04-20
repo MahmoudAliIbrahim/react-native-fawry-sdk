@@ -91,7 +91,7 @@ public class FawrySdkModule extends ReactContextBaseJavaModule implements FawryS
     public void initPaymentPlugin(String merchantID, String serverURL, ReadableArray items, String language, Promise promise) {
         List listItems = ConvertUtils.readableArrayToList(items);
         List payableItems = ConvertUtils.objectListToPayableItems(listItems);
-        FawryPluginAppClass.enableLogging = true;
+        FawryPluginAppClass.enableLogging = false;
         String merchantRefNumber = randomAlphaNumeric(16);
         try {
             FawrySdk.initialize(this.getCurrentActivity(), serverURL, this, merchantID, merchantRefNumber, payableItems, FawrySdk.Language.valueOf(language), PAYMENT_PLUGIN_REQUEST, null, new UUID(1, 2));
