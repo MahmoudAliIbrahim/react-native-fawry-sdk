@@ -141,14 +141,6 @@ public class FawrySdkModule extends ReactContextBaseJavaModule implements FawryS
     }
 
     @Override
-    public void onSuccess(String s, Object o) {
-    }
-
-    @Override
-    public void onFailure(String s) {
-    }
-
-    @Override
     public void paymentOperationSuccess(String s, Object o) {
     }
 

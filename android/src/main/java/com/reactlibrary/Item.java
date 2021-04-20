@@ -57,4 +57,44 @@ public class Item implements PayableItem, Serializable {
     public String getFawryItemQuantity() {
         return qty;
     }
+
+    @Override
+    public String getFawryItemVariantCode() {
+        return null;
+    }
+
+    @Override
+    public String[] getFawryItemReservationCodes() {
+        return new String[0];
+    }
+
+    @Override
+    public String getFawryItemHeight() {
+        return null;
+    }
+
+    @Override
+    public String getFawryItemWidth() {
+        return null;
+    }
+
+    @Override
+    public String getFawryItemLength() {
+        return null;
+    }
+
+    @Override
+    public String getFawryItemWeight() {
+        return null;
+    }
+
+    @Override
+    public String getFawryItemEarningRuleID() {
+        return null;
+    }
+
+    @Override
+    public String getFawryItemOriginalPrice() {
+        return null;
+    }
 }
